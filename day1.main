@@ -1,0 +1,212 @@
+print("hello baby")
+hello baby
+
+print("i am starting with 100 days of python code")
+name="pradeep"
+age=21
+goal="AIengineer"
+print("my name is "+name+" age "+str(age)+" goal is to become "+goal)
+# here i applied concept of typecasting to resolve error:can concatenate only string 
+output:i am starting with 100 days of python code
+my name is pradeep age 21 goal is to become AIengineer
+
+# variable naming rules
+# variable names start with letters(it can include a-z,A-Z,underscore)
+# variable name can include letters,numbers,underscores
+# variable names are case sensitive
+# keywords cannot be used as variable names
+
+# 34age=34 //it is invalid variable names
+
+age=3
+print(age)
+print(type(age))
+
+cgpa=8.76
+print(cgpa)
+print(type(cgpa))
+
+name="pradeep"
+print(name)
+print(type(name))
+
+is_completed=True
+print(is_completed)
+print(type(name))
+
+3
+<class 'int'>
+8.76
+<class 'float'>
+pradeep
+<class 'str'>
+True
+<class 'str'>
+
+#Typecasting
+pi=4.9999
+num_int=int(pi)
+print(num_int)
+print(type(num_int))
+# learned about typecasting and applied same knowledge in above code to resolve error:can concatenate only string
+
+# taking user input
+
+# greetings by taking user input
+hotel="SWATI Deluxe"
+name=input("enter your name : ")
+print("namste "+name+" welcome to our hotel")
+
+print("please provide below details")
+# name=input("Enter Your name : ")
+age=input("Enter Your age : ")
+# course=input("Enter Your Course : ")
+days=input("How many days your going to stay : ")
+
+print("sir your token :")
+print(name+" aged "+age+" going to stay for "+days+" days")
+print("Once again Thank You "+name+ " for Choosing "+hotel+" hotel")
+print("visit us again")
+#Enjoyed creating little responsive by applying knowledge of Input()
+
+# escape sequence characters comments and print statement
+
+print("hello bro")
+'''
+ia nsns njdfks h,SetDefaultColorStyleTransformation
+lsdflhd
+ dflhdf
+ lhdf;d
+ hdfhikeslsdpe[eruythsoer
+               ]
+'''
+
+# above written is multi line comment and current line is single line comment
+
+# time to explore more about escape sequence characters
+# escape sequence characters allow us to use special characters in string without throwing error
+# example: hey rahul how's your day going?
+
+print("hey rahul how\'s your day going? \"is everything okay\" ")
+
+# some escape sewuence characters
+# \n -->new line
+# \t--> tab space
+# \\--> backslash
+# \'--> single quote
+# \" --> double quote
+
+print("hello\nworld")
+print("this is tab\tspace")
+print("it\'s my car")
+print("abdul kalam sir said \"love the work you do\" ")
+
+# if we are printing multiple statements in single line and wish to separate each statement by ,or /or\or# etc characters we can 
+# use sep="," sep="/" sep="#" etc based on ur requirements
+
+print('Hello bro',"how are you",5) 
+# here by default python interpreter adds space between two strings
+
+print('hello bro','how are you',5,sep="@")
+print('hello rahul','oyee',end="...")
+
+#operators
+
+#arithmetic operators
+a=12
+b=2
+# print(a+b)
+# print(a-b)
+# print(a*b)
+# print(a/b)
+# print(a//b)
+# print(a%b)
+
+#comparison operators
+print(a<b)
+print(a>b)
+print(a==b)
+print(a!=b)
+
+#logical operator
+print(True and True)
+print(True and False)
+print(True or True)
+print(True or False)
+print(False or False)
+print(False and False)
+
+#assignment operator
+c=34
+print(c)
+c+=3
+print(c)
+# print((c+=3))
+# print(c-=3)
+
+#+=,-=,/=,*=,%=,//= etc are assignment operator
+
+
+#membership operator
+fruits=['apple','banana','mango']
+print('bananas' not in fruits)
+
+#conditional statements
+
+age=int(input("enter your age : "))
+if(age>18):
+  print("You can Drive")
+elif(age==18):
+  print("let us shedule an interview")
+else:
+  print("Better luck next time")
+
+
+#match case statements it is very similar to switch case
+
+num=int(input("Enter a number between 1 and 10 : "))
+
+match num:
+  case 1:
+    print("You won car")
+  case 4:
+    print("you won iphone")
+  case 7:
+    print("you won bunglow")
+  case _:
+    print("Better luck next time")
+
+#for loops
+
+#for loop is used to iterate over sequences like list,sequence,string,range etc..
+#range function goes from start to n-1
+
+for i in range(1,6):
+  print(i)
+
+print("let us create something amazing")
+num=int(input("Enter a number : "))
+for i in range(1,11):
+  print(num,"*",i,"=",num*i)
+
+
+
+#while loops
+num=1
+while num<6:
+  print(num)
+  num+=1
+#continue and break statement
+
+# for i in range(0,21):
+#   if i%2==0:
+#     continue
+#   print(i)
+
+for i in range(0,10):
+  if i==6:
+    break
+  print(i)
+
+
+#Done with Day1 of python coding challenge
