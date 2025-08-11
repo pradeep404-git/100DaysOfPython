@@ -1,0 +1,56 @@
+#day 02 of python coding
+
+#strings 
+
+#1) three ways to create python strings
+
+name='pradeep'
+name1="pradeep"
+name2='''pradeep''' 
+
+print(name)
+print(name1)
+print(name2)
+
+#using triple quote we can create multi line string 
+name_multi='''pradeep
+is a good 
+boy
+'''
+print(name_multi)
+
+#2) string indexing
+
+my_name='pradeep'
+print(my_name[0])  #p
+print(my_name[1])  #r
+print(my_name[2])  #a
+print(my_name[3])  #d
+print(my_name[4])  #e
+
+#negative indexing -->whenever encounter negative indexing just add length of string to it
+print(my_name[-1])  #-->my_name[-1+7 =6] = p
+print(my_name[-2])  #-->my_name[-2+7=5]  = e
+print(my_name[-3])  #-->my_name[-3+7=4]  = e
+print(my_name[-4])  #-->my_name[-4+7=3]  = d
+
+
+#string slicing
+
+fname='Pradeep'
+print(fname[0])
+
+print(fname[0:4]) #goes from index 0 to 4-1 and output will be Prad
+print(fname[0:-1]) #first resolve negative index to positive index and then apply slicing concept
+#fname[0:-1+7] => fname[0:6] =>output will be Pradee
+
+#note: very important to note is that [0:n] always go from 0 to n-1 same as range function
+
+lname='sankonatti143'
+print(lname[0:10])
+print(lname[0:14:1])  #3rd argument means skip n-1 character here 1-1=0 skip 0 character
+print(lname[0:14:2])  #skip 2-1 => skip 1 character 
+print(lname[0:14:3])  #skip 3-1 => skip 2 character
+
+print(lname[:4])  #replace empty value with 0
+print(lname[0:])  #replace empty value at end with length of string
