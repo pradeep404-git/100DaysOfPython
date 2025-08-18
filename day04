@@ -1,0 +1,86 @@
+#day 4 exploring strings and operations on strings
+
+#note : very important to remember that strings are immutable
+name='harry'
+name1="paddy"
+name2='''sharath'''
+#above all three are valid way of creating strings 
+
+#access characters
+print(name[0])
+print(name1[0])
+print(name2[0])
+
+#if we try to print name[5] it will throw an error index range out of bond bcz name has 5 characters from 0 to 4 
+
+#negative indexes
+
+#name="p  a  d  d  y"
+      #-5  -4 -3 -2 -1
+print(name[-1])
+print(name[-2])
+print(name[-5])
+
+#string slicing
+print(name[0:3]) #print from 0 to 3-1 ie 0 to 2 ...it is very similar to range function
+
+name3="paddy123456789"
+print(name3[:10]) #replace first empty number with 0 and print characters from 0 to 9
+print(name3[0:]) #replace second empty number with length so print characters from 0 to length-1
+#print(name3[0:10:n]) print characters from 0 to 10-1 ie 9 by skipping n-1 characters
+print(name3[::2]) #[ : :2] means starting from 0 to end by skipping 1 characters
+
+
+#string methods
+
+text='radha krishna'
+#text[0]='R' #it will throw an error because strings are immutable
+print(len(text))
+print(text)
+print(text.upper(),text)
+print(text.lower())
+print(text.capitalize()) #only first character of string get converted to uppercase
+print(text.title()) #first letter of evry word get converted to uppercase
+
+s='    love you   '
+print(s)
+print(len(s))
+print(s.strip())
+print(s.lstrip())
+print(s.rstrip())
+
+#find and replace
+
+stat='python is fun'
+print(stat)
+print(len(stat))
+print(stat.find('is')) #print starting index of string given as argument inside find()
+print(stat.replace('fun','Awesome!!!'),stat,' we can see here that strings are immutable ')
+
+#split and join
+str1='apples bananas mangoes'
+print(str1.split()) #this will convert string to list
+print('/'.join(['apples','bananas','mangoes'])) #this will convert list to string
+
+str2='python143'
+print(len(str2))
+print(str2.isalpha()) #returns true if all characters are only alphabets
+print(str2.isalnum()) #returns true if characters are only alphabets and digits
+print(str2.isdigit()) #returns true if all characters are digit
+print(str2.isspace()) #returns true if contains whitespace
+
+
+#string formatting
+template='dear {} you are awesome take this {}$ bag'
+a='john'
+a1=10000
+b='jack'
+b1=5000
+c='marie'
+c1=2500
+
+s1=template.format(a,a1) #this will format string as per arguments passed
+print(s1)
+print(f"{a} you are awesome take this {a1}$ bag")
+
+
