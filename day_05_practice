@@ -1,0 +1,68 @@
+#practice on sets
+#take eight numbers as input from user and WAP to dispaly them once 
+s=set() #this creates an empty set
+n1=int(input("Enter a number 1 : "))
+s.add(n1)
+n2=int(input("Enter a number 2 : "))
+s.add(n2)
+n3=int(input("Enter a number 3 : "))
+s.add(n3)
+n4=int(input("Enter a number 4 : "))
+s.add(n4)
+n5=int(input("Enter a number 5 : "))
+s.add(n5)
+n6=int(input("Enter a number 6 : "))
+s.add(n6)
+n7=int(input("Enter a number 7 : "))
+s.add(n7)
+n8=int(input("Enter a number 8 : "))
+s.add(n8)
+n9=int(input("Enter a number 9 : "))
+s.add(n9)
+print(s)
+
+d={
+    "madad":'help',
+    "kursi":'chair',
+    "khana":'food',
+    "paani":'water',
+    "paagal":'mad'
+}
+print("here is the hindi to english dictionary :")
+print("1.madad \n2.kursi \n3.khana \n4.paani \n5.paagal")
+h=input("Enter a word you want to know english meaning : ")
+print(d.get(h))
+#print(d[h]) also feels correct but if user entered key not inside dictionary 
+#then it will throw an error
+
+
+#allow 4 friends to enter their name as key and favourite languages as valuesand print dictionary
+d1={}
+name=input("enter your name : ")
+language=input("enter your favourite language : ")
+d1.update({name:language})
+name=input("enter your name : ")
+language=input("enter your favourite language : ")
+d1.update({name:language})
+name=input("enter your name : ")
+language=input("enter your favourite language : ")
+d1.update({name:language})
+name=input("enter your name : ")
+language=input("enter your favourite language : ")
+d1.update({name:language})
+print(d1)
+
+#what if two friends have same name ..then the key value pair get updated by latest one
+#its ok if two values are same ..no problem occurs
+
+#very important for interview 
+
+#== operator compares two values are numerically equal or not then try to convert one type to other
+
+s=set()
+s.add(20)
+s.add(20.0)
+s.add(20.1)
+s.add('20')
+print(len(s))
+print(s) #{'20', 20} here 20(int) and 20.0(float) both are numerically equal
