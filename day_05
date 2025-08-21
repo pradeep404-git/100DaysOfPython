@@ -1,0 +1,120 @@
+#lists in python
+
+#lists are containers to store set of values of different data types
+#lists are mutable 
+list1=["apple",143,23.0,False,"mango"]
+print(list1)
+
+#demo to show lists are mutable
+print(list1[0])
+list1[0]="banana"
+print(list1[0])
+print(list1) #['banana', 143, 23.0, False, 'mango']
+
+l1=[1,43,23,56,7,21,799,69]
+print(l1)
+print(len(l1))
+print(l1[0])
+print(l1[1])
+l1.append(12)
+print(l1)
+l1.sort()
+print(l1)
+print(len(l1)) #we can clearly observe that list are mutable they are getting changed continuosly
+l1.reverse()
+print(l1)
+l1.insert(1,420)
+print(l1)
+
+print(l1.pop(3)) #pop will remove element at index 3 and print will return popped element
+print(l1.remove(1)) #remove method will remove particular element from list
+print(l1)
+
+
+
+#lets start deep dive into tuple
+
+#tuples are immutable data types in python
+#tuples are also heterogeneous means can store different type
+t=() #empty tuple
+t1=(1) #python understand it as int
+#way to create tuple with singe element
+t2=(1,)
+print(type(t1))
+print(type(t2))
+
+t3=('a',1,23,143,'a',"b",420.9,False)
+print(t3)
+print(type(t3))
+
+#here are the some tuple methods
+
+print(t3.count(23)) #returns number of times occurance of 23
+print(t3.index('a')) #returns first occurance of 'a'
+
+print(len(t3))
+concat_tuple=t3+(2,4,6,8,10)
+print(concat_tuple)
+print(143 in concat_tuple)
+print(143 not in concat_tuple)
+new_tuple=concat_tuple*2
+print(new_tuple)
+t4=(1,32,43,14,56,74,78,27,12)
+print(min(t4)) #min returns minimum value from tuple but only homegeneous data types mus tbe present
+print(max(t4)) #max will return maximum value but only homogeneous data types must be present
+sliced=concat_tuple[1:5]
+print(sliced)
+
+
+#dictionary is a collection of key value pairs
+#dictionary is unordered
+#dictionary is mutable 
+#dictionary cannot contain duplicate elements
+
+marks={
+    "harry":100,
+    "pradeep":101,
+    "larry":98,
+    "marry":69
+}
+print(marks)
+#print(marks[0]) in dictionary we cannot access elements using index
+print(marks["harry"])
+print(marks["marry"])
+marks["harry"]=143 #marks of harry got updated
+print(marks['harry']) 
+print(marks) #clearly we can see that dictionaries are mutable
+
+print(marks.items()) #return list of dictionary items
+print(marks.keys()) #return list of dictionary keys
+print(marks.values()) #return list of dictionary values
+marks["renuka"]=96
+print(marks)
+marks.update({"rutuja":98})
+print(marks) #during updation if key is not present in dictionary then automatically it will be added
+
+print(marks.get("harry")) #return none if key not found in dictionary
+print(marks["harry"]) #returns error if key not found in dictionary
+
+
+#super important
+#sets are unordered,unindexed,mutable,do not allow duplicacy
+#s=set() is used to create an empty set 
+#s={} this will create an empty dictionary
+
+#sets operations
+s={1,4,6,45}
+print(len(s))
+s1={23,45,1,78}
+print(s1.union(s))
+print(s.intersection(s1))
+print(s.difference(s1))
+print(s1.difference(s))
+s.add(69)
+print(s)
+s.remove(6)
+print(s)
+print(s.pop())
+print(s)
+s.clear()
+print(s)
